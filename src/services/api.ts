@@ -2,7 +2,7 @@ import axios from 'axios';
 import { User, Post, Todo, WeatherData } from '../types';
 
 const API_BASE = 'https://jsonplaceholder.typicode.com';
-const WEATHER_API_KEY = 'YOUR_API_KEY_HERE'; // Replace with actual API key
+const WEATHER_API_KEY = 'fd30b1027a513b8fe3b4bccfafb40b7d';
 
 export const fetchUsers = async (): Promise<User[]> => {
   const response = await axios.get<User[]>(`${API_BASE}/users`);

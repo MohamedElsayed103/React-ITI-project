@@ -14,7 +14,7 @@ const UserPostsManager: React.FC = () => {
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-40">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
       </div>
     );
   }
@@ -34,10 +34,10 @@ const UserPostsManager: React.FC = () => {
           <div
             key={user.id}
             onClick={() => navigate(`/users/${user.id}`)}
-            className="p-4 border border-gray-200 rounded-lg hover:bg-blue-50 hover:border-blue-300 cursor-pointer transition duration-200 transform hover:scale-102"
+            className="p-4 border border-accent-cream rounded-lg hover:bg-accent-cream hover:border-primary cursor-pointer transition duration-200 transform hover:scale-102"
           >
-            <h3 className="font-semibold text-lg text-gray-800">{user.name}</h3>
-            <p className="text-sm text-gray-600">@{user.username}</p>
+            <h3 className="font-semibold text-lg text-primary-dark">{user.name}</h3>
+            <p className="text-sm text-primary">@{user.username}</p>
             <p className="text-sm text-gray-500">{user.email}</p>
           </div>
         ))}

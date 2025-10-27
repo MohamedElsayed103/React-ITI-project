@@ -21,7 +21,7 @@ const Analytics: React.FC = () => {
   if (usersLoading || postsLoading || todosLoading) {
     return (
       <div className="flex justify-center items-center h-40">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
       </div>
     );
   }
@@ -74,8 +74,8 @@ const Analytics: React.FC = () => {
     color 
   }) => (
     <div className={`p-4 rounded-lg ${color} border-2`}>
-      <h4 className="text-sm font-semibold text-gray-700 mb-1">{title}</h4>
-      <p className="text-2xl font-bold text-gray-900">{value}</p>
+      <h4 className="text-sm font-semibold text-primary-dark mb-1">{title}</h4>
+      <p className="text-2xl font-bold text-primary-dark">{value}</p>
       {subtitle && <p className="text-xs text-gray-600 mt-1">{subtitle}</p>}
     </div>
   );
@@ -86,7 +86,7 @@ const Analytics: React.FC = () => {
       <StatBox 
         title="Total Users" 
         value={totalUsers}
-        color="bg-purple-100 border-purple-300"
+        color="bg-accent-cream border-primary"
       />
 
       {/* Posts Statistics */}
@@ -95,13 +95,13 @@ const Analytics: React.FC = () => {
           title="Most Posts" 
           value={userWithMostPosts.count}
           subtitle={`@${getUserName(userWithMostPosts.userId)}`}
-          color="bg-green-100 border-green-300"
+          color="bg-green-100 border-green-400"
         />
         <StatBox 
           title="Fewest Posts" 
           value={userWithFewestPosts.count}
           subtitle={`@${getUserName(userWithFewestPosts.userId)}`}
-          color="bg-red-100 border-red-300"
+          color="bg-red-100 border-red-400"
         />
       </div>
 
@@ -111,13 +111,13 @@ const Analytics: React.FC = () => {
           title="Most Completed Todos" 
           value={userWithMostCompletedTodos.count}
           subtitle={`@${getUserName(userWithMostCompletedTodos.userId)}`}
-          color="bg-blue-100 border-blue-300"
+          color="bg-accent-cream border-primary"
         />
         <StatBox 
           title="Fewest Completed Todos" 
           value={userWithFewestCompletedTodos.count}
           subtitle={`@${getUserName(userWithFewestCompletedTodos.userId)}`}
-          color="bg-orange-100 border-orange-300"
+          color="bg-orange-100 border-accent-orange"
         />
       </div>
     </div>

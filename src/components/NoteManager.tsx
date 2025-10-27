@@ -35,14 +35,14 @@ const NoteManager: React.FC = () => {
 
   const priorityColors = {
     important: 'bg-red-50 border-red-300',
-    normal: 'bg-blue-50 border-blue-300',
+    normal: 'bg-accent-cream border-primary',
     delayed: 'bg-yellow-50 border-yellow-300',
   };
 
   const priorityBadges = {
     important: 'bg-red-500',
-    normal: 'bg-blue-500',
-    delayed: 'bg-yellow-500',
+    normal: 'bg-primary',
+    delayed: 'bg-accent-orange',
   };
 
   const renderNoteSection = (sectionPriority: 'important' | 'normal' | 'delayed', title: string, emoji: string) => {
@@ -100,14 +100,14 @@ const NoteManager: React.FC = () => {
           value={noteContent}
           onChange={(e) => setNoteContent(e.target.value)}
           placeholder="Enter your note..."
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none"
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none resize-none"
           rows={3}
         />
         <div className="flex gap-2 mt-2">
           <select
             value={priority}
             onChange={(e) => setPriority(e.target.value as 'important' | 'normal' | 'delayed')}
-            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+            className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary outline-none"
           >
             <option value="important">🔴 Important</option>
             <option value="normal">🔵 Normal</option>
@@ -116,7 +116,7 @@ const NoteManager: React.FC = () => {
           <button
             onClick={addNote}
             disabled={!noteContent.trim()}
-            className="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="flex-1 bg-primary hover:bg-primary-dark text-white font-semibold py-2 px-4 rounded-lg transition duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Add Note
           </button>

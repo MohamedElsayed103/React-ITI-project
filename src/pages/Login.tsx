@@ -22,9 +22,9 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-primary-dark to-primary flex items-center justify-center p-4">
       <div className="bg-white rounded-lg shadow-2xl p-8 w-full max-w-md">
-        <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">
+        <h1 className="text-3xl font-bold text-center mb-8 text-primary-dark">
           Dashboard Login
         </h1>
         
@@ -38,7 +38,7 @@ const Login: React.FC = () => {
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
               placeholder="admin"
               required
             />
@@ -53,7 +53,7 @@ const Login: React.FC = () => {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
               placeholder="admin123"
               required
             />
@@ -67,7 +67,7 @@ const Login: React.FC = () => {
 
           <button
             type="submit"
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition duration-200 transform hover:scale-105"
+            className="w-full bg-primary hover:bg-primary-dark text-white font-semibold py-3 rounded-lg transition duration-200 transform hover:scale-105"
           >
             Sign In
           </button>
@@ -75,7 +75,7 @@ const Login: React.FC = () => {
 
         <div className="mt-6 text-center text-sm text-gray-600">
           <p>Demo credentials:</p>
-          <p className="font-mono bg-gray-100 p-2 rounded mt-2">
+          <p className="font-mono bg-accent-cream p-2 rounded mt-2">
             Username: admin<br />
             Password: admin123
           </p>

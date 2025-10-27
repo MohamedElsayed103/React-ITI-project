@@ -172,17 +172,16 @@ dashboard-app/
 - **Tailwind CSS** - Utility-first CSS framework
 - **Context API** - State management (Auth & Todos)
 
-## 🎨 Key Features Implementation
+## 🎨 Design & Styling
 
-### Authentication Flow
-- Login credentials stored in localStorage
-- Protected routes redirect to login if not authenticated
-- Logout clears authentication state
+### Color Palette
+The dashboard uses a professional, cohesive color scheme:
+- **Primary Dark** (#174143) - Deep teal for headers and important text
+- **Primary** (#427A76) - Medium teal for buttons and interactive elements
+- **Accent Orange** (#F9B487) - Warm peach for highlights and CTAs
+- **Accent Cream** (#F5E5E1) - Soft cream for backgrounds and subtle accents
 
-### State Management
-- **AuthContext**: Manages login/logout state
-- **TodoContext**: Persists todo completion state across the app
-- **React Query**: Handles server state and caching for API data
+See `COLOR_SCHEME.md` for detailed color usage documentation.
 
 ### Responsive Design
 - Mobile-first approach with Tailwind CSS
